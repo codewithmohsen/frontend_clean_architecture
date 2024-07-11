@@ -1,0 +1,47 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "main": "dist/hello.js",
+  "types": "dist/hello.d.ts",
+  "outDir": "dist",
+  "declaration": true,
+  "files": [
+    "build",
+    "src/**/*.d.ts"
+  ],
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run clean && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.3",
+    "react-redux": "^9.1.1",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.24.1",
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.3.2",
+    "@types/redux-logger": "^3.0.13",
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5"
+  }
+}

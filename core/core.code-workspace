@@ -1,0 +1,42 @@
+{
+	"folders": [
+		{
+			"name": "Project Document",
+			"path": "_docs"
+		},
+		{
+			"name": "shared codes",
+			"path": "_shared"
+		},
+		{
+			"name": "1. Entity Layer",
+			"path": "entities"
+		},
+		{
+			"name": "2. Usecase Layer",
+			"path": "usecases"
+		},
+		{
+			"name": "3. Adapters and Interfaces Layer",
+			"path": "adapters"
+		},
+		{
+			"name": "4. Frameworks and Devices Layer",
+			"path": "frameworks"
+		},
+		{
+			"name": "Test",
+			"path": "_tests"
+		}
+	],
+	"settings": {
+		"terminal.integrated.fontFamily": "Meslo LG L DZ for Powerline",
+		"terminal.integrated.shellIntegration.enabled": true,
+		"terminal.integrated.commandsToSkipShell": ["\"terminal.integrated.shell.osx\": \"zsh\""],
+		"terminal.integrated.fontSize": 12,
+		"terminal.integrated.localEchoStyle": "dim"
+	},
+	"extensions": {
+		"recommendations": ["eg2.tslint", "dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+	}
+}
