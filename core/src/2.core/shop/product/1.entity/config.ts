@@ -1,5 +1,5 @@
 const CONFIG = {
-	REDUCER_NAME: 'shopReducer-product',
+	REDUCER_NAME: '/shop/product',
 	REDUCER_STATE: 'products',
 	Entity_NAME: 'Product',
 };

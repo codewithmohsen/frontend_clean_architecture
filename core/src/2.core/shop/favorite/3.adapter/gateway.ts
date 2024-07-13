@@ -1,4 +1,4 @@
-import { EAction } from 'src/1.domain';
+import { EAction } from '../../../../1.domain';
 import { IEntity, IInbound, IOutbound } from '../1.entity';
 
 class Gateway implements IInbound {
