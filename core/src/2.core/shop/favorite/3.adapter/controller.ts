@@ -1,18 +1,7 @@
-import { fetchBaseQuery } from '@reduxjs/toolkit/query';
-import { createApi } from '@reduxjs/toolkit/query/react';
-import { Services } from './services';
-import { Gateway } from './gateway';
-import { CORE_CONFIG } from '../../../../1.domain';
-import { Usecase } from '../2.usecase';
 import { CONFIG, IEntity } from '../1.entity';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-// const gateway = new Gateway(new Services(), new Usecase());
-
 const initialState: IEntity = {
 	ids: [],
-	filteredIds: [],
-	filteredId: false,
 };
 
 const Controller = createSlice({
