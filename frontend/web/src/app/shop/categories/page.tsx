@@ -1,25 +1,31 @@
 "use client";
-import React, { useEffect } from 'react';
-import Link from 'next/link';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Zoom from '@mui/material/Zoom';
-// import { useReadAllCategoriesQuery } from 'core/dist/index';\
-import { CardActions, Rating, IconButton } from "@mui/material";
-import { useReadAllCategoriesQuery } from 'core/src/2.core/shop/category/3.adapter';
-import { IEntity } from "core/src/2.core/shop/category/1.entity";
-import { camelCase } from 'string-ts';
+// ------------------------------------------------------------------- IMPORT/REACT
+import React, { useEffect } from "react";
+// ------------------------------------------------------------------- IMPORT/REDUX
+// ------------------------------------------------------------------- IMPORT/NEXT
+import Link from "next/link";
 import Image from 'next/image';
+// ------------------------------------------------------------------- IMPORT/STRING-TS
+import { camelCase } from 'string-ts';
+// ------------------------------------------------------------------- IMPORT/MATERIAL
+import Box from "@mui/material/Box";
+import CircularProgress from "@mui/material/CircularProgress";
+import Grid from "@mui/material/Grid";
+import Zoom from "@mui/material/Zoom";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+// ------------------------------------------------------------------- IMPORT/ICONS-MATERIAL
+// ------------------------------------------------------------------- IMPORT/CORE
+import { IEntity as ICategoryEntity, useReadAllCategoriesQuery } from 'core/src/2.core/shop/category';
+// ------------------------------------------------------------------- PAGE
 export default function Page() {
     let photo = '';
     const staticDuration = 750;
     let transitionDelay = -staticDuration;
-    const { data: categories = [] as IEntity[], isLoading, isError, error } = useReadAllCategoriesQuery();
+    const { data: categories = [] as ICategoryEntity[], isLoading, isError, error } = useReadAllCategoriesQuery();
     useEffect(() => {
 
         console.log(categories, isLoading, isError, error);
@@ -47,7 +53,7 @@ export default function Page() {
             <Grid container>
                 <h1>{camelCase("Product Category")}</h1>
                 <Grid container spacing={2}>
-                    {categories.length > 0 && categories?.map((category: IEntity, index: number) => {
+                    {categories.length > 0 && categories?.map((category: ICategoryEntity, index: number) => {
                         switch (category.name) {
                             case "men's clothing":
                                 photo = "/shop/categories/true-blue-suit.jpg";
@@ -78,27 +84,28 @@ export default function Page() {
                                                 padding: "1em",
                                             }}
                                         >
-                                            <CardMedia
-                                                title={category.name}
-                                                sx={{ height: '200px', padding: "1em 1em 0 1em", position: 'relative' }}
+                                            <Link href={`/shop/categories/${category.name}`}
+                                                style={{ textDecoration: 'none', color: 'inherit' }}
                                             >
-                                                {photo && <div style={{ position: 'relative', textAlign: "center", width: '100%', height: '100%' }}>
-                                                    <Image src={photo} height="200" width="200" style={{ objectFit: "contain" }} alt={category.name} />
-                                                </div>}
-                                            </CardMedia>
-                                            <CardContent>
-                                                <Link href={`/shop/categories/${category.name}`}
-                                                    style={{ textDecoration: 'none', color: 'inherit' }}
+                                                <CardMedia
+                                                    title={category.name}
+                                                    sx={{ height: '200px', padding: "1em 1em 0 1em", position: 'relative' }}
                                                 >
+                                                    {photo && <div style={{ position: 'relative', textAlign: "center", width: '100%', height: '100%' }}>
+                                                        <Image src={photo} height="200" width="200" style={{ objectFit: "contain" }} alt={category.name} />
+                                                    </div>}
+                                                </CardMedia>
+                                                <CardContent>
+
                                                     <Typography
 
                                                         style={{ textTransform: 'capitalize', lineHeight: '1.5em', height: '4.5em', overflow: 'hidden' }}
                                                         gutterBottom align='center' variant="body1" component="div">
                                                         {category.name}
                                                     </Typography>
-                                                </Link>
-                                            </CardContent>
 
+                                                </CardContent>
+                                            </Link>
                                             <CardActions style={{
                                                 display: "flex",
                                                 justifyContent: "space-between",

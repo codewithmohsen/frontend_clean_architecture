@@ -63,14 +63,14 @@ npx kill-port 1337;
 npx kill-port 3000;
 printSuccess "Release Completed" "Ports 1337 & 3000 are free.";
 #----------------------------------- RUN DEVELOP MODE
-printInfo "Backend development mode is starting" "Please wait.";
-npm run develop --prefix ./backend;
+printInfo "Backend development mode is starting" "Please wait." &
+npm run develop --prefix ./backend &
 printSuccess "Backend server as development mode is runing" "You can access backend server from https://192.168.0.1/1337";
-printInfo "Website development mode is starting" "Please wait.";
-npm run dev --prefix ./frontend/web;
+printInfo "Website development mode is starting" "Please wait." &
+npm run dev --prefix ./frontend/web &
 printSuccess "Website development mode is runing" "You can access website from https://192.168.0.1/3000";
 printInfo "System is opening" "Please wait.";
-open http://localhost:1337/admin/;
+open http://localhost:1337/admin/auth/login/ 
 open http://localhost:3000/shop/products/;
 printSuccess "Enjoy" ":)";
 

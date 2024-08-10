@@ -1,21 +1,36 @@
 "use client";
-import { useEffect } from "react";
-import { Box, CircularProgress, Grid, Zoom, Card, CardMedia, CardContent, Typography, CardActions, Rating, IconButton } from "@mui/material";
+// ------------------------------------------------------------------- IMPORT/REACT
+import React, { useEffect } from "react";
+// ------------------------------------------------------------------- IMPORT/REDUX
+import { useDispatch, useSelector } from "react-redux";
+// ------------------------------------------------------------------- IMPORT/NEXT
 import Link from "next/link";
+import Image from 'next/image';
+// ------------------------------------------------------------------- IMPORT/STRING-TS
+import { camelCase } from 'string-ts';
+// ------------------------------------------------------------------- IMPORT/MATERIAL
+import Box from "@mui/material/Box";
+import CircularProgress from "@mui/material/CircularProgress";
+import Grid from "@mui/material/Grid";
+import Zoom from "@mui/material/Zoom";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Rating from "@mui/material/Rating";
+import IconButton from "@mui/material/IconButton";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+// ------------------------------------------------------------------- IMPORT/ICONS-MATERIAL
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import { IEntity as IProductEntity } from "core/src/2.core/shop/product/1.entity";
-import { IEntity as IFavoriteEntity } from "core/src/2.core/shop/favorite/1.entity";
-// import { useReadCategoryQuery } from "core/dist";
-import { useReadCategoryQuery } from "core/src/2.core/shop/category/3.adapter";
-import Image from 'next/image';
-import { useDispatch, useSelector } from "react-redux";
+// ------------------------------------------------------------------- IMPORT/CORE
+import { IEntity as IProductEntity } from "core/src/2.core/shop/product";
+import { IEntity as IFavoriteEntity, toggleFavorite } from "core/src/2.core/shop/favorite";
+import { useReadCategoryQuery } from "core/src/2.core/shop/category";
 import { RootState } from "core/src";
-
-import { camelCase } from "string-ts";
-import { toggleFavorite } from "core/src/2.core/shop/favorite/3.adapter";
+// ------------------------------------------------------------------- PAGE
 export default function Page({ params }: { params: { slug: string; }; }) {
     const staticDuration = 750;
     let transitionDelay = -staticDuration;
@@ -71,27 +86,28 @@ export default function Page({ params }: { params: { slug: string; }; }) {
                                                 padding: "1em",
                                             }}
                                         >
-                                            <CardMedia
-                                                title={product.title ? product?.title : ''}
-                                                sx={{ height: '200px', padding: "1em 1em 0 1em", position: 'relative' }}
+                                            <Link href={`/shop/products/${product.id}`}
+                                                style={{ textDecoration: 'none', color: 'inherit' }}
                                             >
-                                                {product.image && product.title && <div style={{ position: 'relative', textAlign: "center", width: '100%', height: '100%' }}>
-                                                    <Image src={product.image} height="200" width="200" style={{ objectFit: "contain" }} alt={product.title} />
-                                                </div>}
-                                            </CardMedia>
-
-                                            <CardContent>
-                                                <Link href={`/shop/products/${product.id}`}
-                                                    style={{ textDecoration: 'none', color: 'inherit' }}
+                                                <CardMedia
+                                                    title={product.title ? product?.title : ''}
+                                                    sx={{ height: '200px', padding: "1em 1em 0 1em", position: 'relative' }}
                                                 >
+                                                    {product.image && product.title && <div style={{ position: 'relative', textAlign: "center", width: '100%', height: '100%' }}>
+                                                        <Image src={product.image} height="200" width="200" style={{ objectFit: "contain" }} alt={product.title} />
+                                                    </div>}
+                                                </CardMedia>
+
+                                                <CardContent>
+
                                                     <Typography
                                                         style={{ lineHeight: '1.5em', height: '4.5em', overflow: 'hidden' }}
                                                         gutterBottom align='center' variant="body1" component="div">
                                                         {product.title}
                                                     </Typography>
-                                                </Link>
-                                            </CardContent>
 
+                                                </CardContent>
+                                            </Link>
                                             <CardActions style={{
                                                 display: "flex",
                                                 justifyContent: "space-between",

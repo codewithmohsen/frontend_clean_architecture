@@ -2,6 +2,11 @@
 
 /package-lock.json
 
+
+/.anima
+/.vscode
+
+
 # dependencies
 /node_modules
 /.pnp

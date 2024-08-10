@@ -1,1 +1,1 @@
-export * from './3.interface/store';
+export * from './3.interfaceLayer/store';

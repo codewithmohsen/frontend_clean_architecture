@@ -1,19 +1,35 @@
 "use client";
-import { Box, CircularProgress, Grid, Zoom, Card, CardMedia, CardContent, Typography, CardActions, Rating, IconButton } from '@mui/material';
-import { toggleFavorite } from 'core/src/2.core/shop/favorite/3.adapter';
-import { useReadAllProductsQuery } from 'core/src/2.core/shop/product/3.adapter';
-import { RootState } from 'core/src/3.interface/store';
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { IEntity as IProductEntity } from "core/src/2.core/shop/product/1.entity";
-import { IEntity as IFavoriteEntity } from "core/src/2.core/shop/favorite/1.entity";
+// ------------------------------------------------------------------- IMPORT/REACT
+import React, { useEffect } from "react";
+// ------------------------------------------------------------------- IMPORT/REDUX
+import { useDispatch, useSelector } from "react-redux";
+// ------------------------------------------------------------------- IMPORT/NEXT
+import Link from "next/link";
+import Image from 'next/image';
+// ------------------------------------------------------------------- IMPORT/STRING-TS
+import { camelCase } from 'string-ts';
+// ------------------------------------------------------------------- IMPORT/MATERIAL
+import Box from "@mui/material/Box";
+import CircularProgress from "@mui/material/CircularProgress";
+import Grid from "@mui/material/Grid";
+import Zoom from "@mui/material/Zoom";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Rating from "@mui/material/Rating";
+import IconButton from "@mui/material/IconButton";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+// ------------------------------------------------------------------- IMPORT/ICONS-MATERIAL
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import Image from 'next/image';
-import Link from "next/link";
-import { camelCase } from 'string-ts';
+// ------------------------------------------------------------------- IMPORT/CORE
+import { IEntity as IProductEntity, useReadAllProductsQuery } from "core/src/2.core/shop/product";
+import { IEntity as IFavoriteEntity, toggleFavorite } from "core/src/2.core/shop/favorite";
+import { RootState } from "core/src";
+// ------------------------------------------------------------------- PAGE
 export default function Page() {
     const staticDuration = 750;
     let transitionDelay = -staticDuration;

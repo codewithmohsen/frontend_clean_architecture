@@ -1,19 +1,30 @@
 "use client";
-
-import { useEffect } from "react";
-import { useReadProductQuery } from "core/src/2.core/shop/product/3.adapter";
-import Box from '@mui/material/Box';
+// ------------------------------------------------------------------- IMPORT/REACT
+import React, { useEffect } from "react";
+// ------------------------------------------------------------------- IMPORT/REDUX
+import { useDispatch, useSelector } from "react-redux";
+// ------------------------------------------------------------------- IMPORT/NEXT
+import Image from 'next/image';
+// ------------------------------------------------------------------- IMPORT/STRING-TS
+import { camelCase } from 'string-ts';
+// ------------------------------------------------------------------- IMPORT/MATERIAL
+import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
-import { Grid, Zoom, Typography, Rating, IconButton } from "@mui/material";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import Grid from "@mui/material/Grid";
+import Zoom from "@mui/material/Zoom";
+import Typography from "@mui/material/Typography";
+import Rating from "@mui/material/Rating";
+import IconButton from "@mui/material/IconButton";
+// ------------------------------------------------------------------- IMPORT/ICONS-MATERIAL
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import Image from 'next/image';
-import { IEntity as IFavoriteEntity } from "core/src/2.core/shop/favorite/1.entity";
-import { useDispatch, useSelector } from "react-redux";
+// ------------------------------------------------------------------- IMPORT/CORE
+import { useReadProductQuery } from "core/src/2.core/shop/product";
+import { IEntity as IFavoriteEntity, toggleFavorite } from "core/src/2.core/shop/favorite";
 import { RootState } from "core/src";
-import { toggleFavorite } from "core/src/2.core/shop/favorite/3.adapter";
+// ------------------------------------------------------------------- PAGE
 export default function Page({ params }: { params: { slug: string; }; }) {
     let transitionDelay = 0;
     const { data: product = undefined, isLoading, isError, error } = useReadProductQuery(+params.slug);
