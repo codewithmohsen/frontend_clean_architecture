@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_rating_zero_to_five_stars",
+  "info": {
+    "displayName": "zero-to-five-stars",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "rate": {
+      "type": "decimal",
+      "min": 0,
+      "max": 5
+    },
+    "count": {
+      "type": "biginteger",
+      "min": "0"
+    }
+  }
+}

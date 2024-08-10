@@ -1,0 +1,21 @@
+{
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#19A119",
+		"statusBar.debuggingBackground": "#19A119",
+		"statusBar.noFolderBackground": "#19A119",
+		"statussBar.prominentBackground": "#19A119"
+	},
+	"terminal.integrated.cursorStyle": "line",
+	"terminal.integrated.cursorStyleInactive": "line",
+	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.copyOnSelection": true,
+	"terminal.integrated.accessibleViewFocusOnCommandExecution": false,
+	"terminal.integrated.defaultLocation": "view",
+	"terminal.integrated.defaultProfile.osx": "zsh",
+	"terminal.integrated.macOptionIsMeta": true,
+	"terminal.integrated.smoothScrolling": true,
+	"terminal.integrated.tabs.location": "right",
+	"terminal.integrated.stickyScroll.enabled": true,
+	"terminal.integrated.mouseWheelZoom": true,
+	"accessibility.verbosity.hover": false
+}
