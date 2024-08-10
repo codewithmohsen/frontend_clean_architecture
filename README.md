@@ -6,11 +6,12 @@ npm install --prefix ./frontend/web ./frontend/core ./backend
 `
 
 ### Usage
-#### Start project
+#### Solution 1
 Bash command (easy to use)
 ```
 ./dev.sh
 ```
+#### Solution 2
 Backent server
 ```
 npm run develop --prefix ./backend
