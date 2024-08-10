@@ -32,7 +32,7 @@ https://192.168.0.1/3000
 + Material UI (UI Library): https://mui.com
 
 ## Acknowledgement
-I have been implementing this project constantly for free to share knowledge of programming in reactjs communities, since 2023, by myself specially reviewing ASP .net solutions as backend projects where we have kind of this architecure there. It is my prespective of programming and it could have any mistakes, consequently please give me your comment and keep in touch. It is my pleasure if you donate me for free by following my profile and give me a shiny star by only signle click to this project. Good Luck!
+I have been implementing this project constantly for free to share knowledge of programming in reactjs communities, since 2023, by myself specially reviewing ASP .net solutions as backend projects where we have kind of this architecure there. It is my prespective of programming and it could have any mistakes, consequently please give me your comment and keep in touch. It is my pleasure if you donate me for free by following my profile and give me a shiny star by only one signle click to this project. Good Luck!
 
 ## Copyright
 
