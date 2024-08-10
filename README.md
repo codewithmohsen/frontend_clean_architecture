@@ -23,3 +23,5 @@ Frontend website
 npm run dev --prefix ./frontend/web
 https://192.168.0.1/3000
 ```
+## References
+https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
