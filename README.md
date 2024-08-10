@@ -7,7 +7,7 @@ npm install --prefix ./frontend/web ./frontend/core ./backend
 
 ### Usage
 #### Solution 1
-Bash command (easy to use)
+Bash command (easy to use) -> under construction for Mac systems.
 ```
 ./dev.sh
 ```
