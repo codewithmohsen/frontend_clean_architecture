@@ -24,10 +24,10 @@ npm run dev --prefix ./frontend/web
 https://192.168.0.1/3000
 ```
 ## References
-Clean Architecture (Project Structure): https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
-RTK Query (Service Manger): https://redux-toolkit.js.org/rtk-query
-Redux Toolkit (State Manager)://redux-toolkit.js.org
-NextJs (Framework): https://nextjs.org
-YUP (Entity Validation): https://www.npmjs.com/package/yup
-Material UI (UI Library): https://mui.com
++ Clean Architecture (Project Structure): https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
++ RTK Query (Service Manger): https://redux-toolkit.js.org/rtk-query
++ Redux Toolkit (State Manager)://redux-toolkit.js.org
++ NextJs (Framework): https://nextjs.org
++ YUP (Entity Validation): https://www.npmjs.com/package/yup
++ Material UI (UI Library): https://mui.com
 
