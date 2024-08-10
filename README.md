@@ -26,8 +26,11 @@ https://192.168.0.1/3000
 ## References
 + Clean Architecture (Project Structure): https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 + RTK Query (Service Manger): https://redux-toolkit.js.org/rtk-query
-+ Redux Toolkit (State Manager)://redux-toolkit.js.org
++ Redux Toolkit (State Manager) https://redux-toolkit.js.org
 + NextJs (Framework): https://nextjs.org
 + YUP (Entity Validation): https://www.npmjs.com/package/yup
 + Material UI (UI Library): https://mui.com
+
+## Acknowledgement
+I implement this project by my research, study, code review, search and so on without any help from anybody. It is my pleasure if you donate me for freee by following me and give me a shiny star to this project. Good Luck!
 
