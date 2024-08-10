@@ -32,5 +32,10 @@ https://192.168.0.1/3000
 + Material UI (UI Library): https://mui.com
 
 ## Acknowledgement
-I have been implementing this project for free constantly since 2023 by my research, study, code review, search and so on specially in ASP .net projects without any help from anybody. It is my prespective of programming and it could have mistakes, consequently please give me your comment and keep it touch. It is my pleasure if you donate me for freee by following me and give me a shiny star to this project. Good Luck!
+I have been implementing this project constantly for free to share knowledge of programming in reactjs communities, since 2023, by myself specially reviewing ASP .net solutions as backend projects where we have kind of this architecure there. It is my prespective of programming and it could have any mistakes, consequently please give me your comment and keep it touch. It is my pleasure if you donate me for freee by following me and give me a shiny star to this project. Good Luck!
+
+## Copyright
+
+Copyright (C) 2023-Now By CodeWithMohsen (Mohsen Hajikarimian)
+Please do not use this project in commercial use.
 
