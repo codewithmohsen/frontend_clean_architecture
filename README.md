@@ -1,17 +1,18 @@
-# clean_architecture_reactjs
+# Clean Architecture in React Projects
+Enjoy to have a new experience on clean architecture in react projects by CodeWithMohsen perspective.
 
-### Dependencies
+## Installation
 `
 npm install --prefix ./frontend/web ./frontend/core ./backend
 `
 
-### Usage
-#### Solution 1
+## Usage
+### Solution 1
 Bash command (easy to use) -> under construction for Mac systems.
 ```
 ./dev.sh
 ```
-#### Solution 2
+### Solution 2
 Backent server
 ```
 npm run develop --prefix ./backend
