@@ -37,5 +37,5 @@ I have been implementing this project constantly for free to share knowledge of 
 ## Copyright
 
 Copyright (C) 2023-Now By CodeWithMohsen (Mohsen Hajikarimian)
-Please do not use this project in commercial use.
+Please do not use this project in commercial projects.
 
