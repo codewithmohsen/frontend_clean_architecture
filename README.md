@@ -1,5 +1,5 @@
 # clean_architecture_reactjs
-### Usage\
+### Usage
 `
 ./dev.sh
 `
