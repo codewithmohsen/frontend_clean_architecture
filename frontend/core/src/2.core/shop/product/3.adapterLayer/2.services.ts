@@ -1,5 +1,6 @@
-import { IEntity, IInbound } from '../1.entityLayer';
+import { IEntity } from '../1.entityLayer';
 import { CORE_CONFIG } from '../../../../1.domain';
+import { IInbound } from './1.interface';
 
 class Services implements IInbound {
 	async readAll(): Promise<IEntity[]> {

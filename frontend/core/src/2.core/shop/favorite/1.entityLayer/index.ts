@@ -1,7 +1,4 @@
-// ------------------------------------------------------------------- IMPORT
-import { Entity, Object, IEntity } from './object';
-import { CONFIG } from './config';
-
-// ------------------------------------------------------------------- EXPORT
-export { Entity, Object, CONFIG };
-export type { IEntity };
+export { CONFIG } from './config';
+export { Entity, Schema } from './schema';
+export type { IEntity } from './schema';
+// export type { IInbound, IOutbound } from './interfaces';

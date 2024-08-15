@@ -1,6 +1,5 @@
-const CONFIG = {
-	REDUCER_NAME: '/shop/cart',
-	REDUCER_STATE: 'cart',
-	Entity_NAME: 'Cart',
-};
+import { generate, TConfig } from 'src/1.domain/types/tConfig';
+
+const CONFIG: TConfig = generate('cart', 'shop', false);
+
 export { CONFIG };

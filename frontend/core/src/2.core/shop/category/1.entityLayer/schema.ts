@@ -1,19 +1,19 @@
 import { InferType, object, string, ValidationError } from 'yup';
 
 // ------------------------------------------------------------------- OBJECT
-const Object = object().shape({
+const Schema = object().shape({
 	name: string(),
 });
 
-// ------------------------------------------------------------------- INTERFACE
-interface IEntity extends InferType<typeof Object> {}
+// ------------------------------------------------------------------- INTERFACE of OBJECT
+interface IEntity extends InferType<typeof Schema> {}
 
 // ------------------------------------------------------------------- ENTITY
 interface Entity extends IEntity {}
 class Entity implements IEntity {
 	constructor(props: IEntity) {
 		try {
-			const result = Object.validateSync(props);
+			const result = Schema.validateSync(props);
 			if (result) {
 				for (let key in props) {
 					(this as any)[key] = (props as any)[key];
@@ -26,4 +26,4 @@ class Entity implements IEntity {
 	}
 }
 
-export { Entity, IEntity, Object };
+export { Entity, IEntity, Schema };

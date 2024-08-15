@@ -1,4 +1,6 @@
-import { IEntity, IInbound, IOutbound } from '../1.entityLayer';
+import { IEntity } from '../1.entityLayer';
+import { IOutbound } from '../2.usecaseLayer/1.interface';
+import { IInbound } from './1.interface';
 
 class Gateway implements IInbound {
 	api: IInbound;

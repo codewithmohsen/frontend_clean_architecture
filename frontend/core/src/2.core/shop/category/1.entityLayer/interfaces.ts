@@ -1,4 +1,4 @@
-import { IEntity } from './object';
+import { IEntity } from './schema';
 import { EAction, IInboundBase, IOutboundBase } from '../../../../1.domain';
 import { IEntity as IProduct } from '../../product/1.entityLayer';
 

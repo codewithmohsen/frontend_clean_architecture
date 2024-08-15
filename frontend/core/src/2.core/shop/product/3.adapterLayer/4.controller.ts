@@ -1,7 +1,7 @@
 import { fetchBaseQuery } from '@reduxjs/toolkit/query';
 import { createApi } from '@reduxjs/toolkit/query/react';
-import { Services } from './services';
-import { Gateway } from './gateway';
+import { Services } from './2.services';
+import { Gateway } from './3.gateway';
 import { CORE_CONFIG } from '../../../../1.domain';
 import { Usecase } from '../2.usecaseLayer';
 import { CONFIG, IEntity } from '../1.entityLayer';
